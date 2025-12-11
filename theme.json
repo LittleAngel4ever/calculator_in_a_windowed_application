@@ -1,0 +1,59 @@
+{
+    "window": {
+      "title": "Modern Calculator",
+      "geometry": "400x650",
+      "resizable": false
+    },
+    "fonts": {
+      "display": { "family": "Segoe UI", "size": 34, "weight": "normal" },
+      "button": { "family": "Segoe UI", "size": 20, "weight": "normal" },
+      "mode": { "family": "Segoe UI", "size": 12, "weight": "normal" },
+      "sci": { "family": "Segoe UI", "size": 14, "weight": "normal" }
+    },
+    "colors": {
+      "bg": "#121212",
+      "display_bg": "#1e1e1e",
+      "display_fg": "#ffffff",
+      "num_btn": "#2d2d2d",
+      "num_btn_hover": "#3d3d3d",
+      "num_text": "#ffffff",
+      "op_btn": "#ff9500",
+      "op_btn_hover": "#ffaa33",
+      "op_text": "#ffffff",
+      "special_btn": "#a6a6a6",
+      "special_btn_hover": "#bfbfbf",
+      "special_text": "#000000",
+      "sci_btn": "#4a9eff",
+      "sci_btn_hover": "#6ab0ff",
+      "sci_text": "#ffffff",
+      "toggle_btn": "#5856d6",
+      "toggle_btn_hover": "#7876f6",
+      "shadow": "#000000"
+    },
+    "layout": {
+      "padding": 15,
+      "display_height": 100,
+      "sci_panel_height": 250,
+      "keyboard_rows": 5,
+      "keyboard_cols": 4,
+      "keyboard_col_min": 80,
+      "keyboard_row_min": 70
+    },
+    "buttons": {
+      "main": [
+        ["C", "⌫", "%", "/"],
+        ["7", "8", "9", "*"],
+        ["4", "5", "6", "-"],
+        ["1", "2", "3", "+"],
+        ["0", ".", "=", ""]
+      ],
+      "scientific": [
+        ["sin", "cos", "tan", "π"],
+        ["asin", "acos", "atan", "e"],
+        ["log", "ln", "√", "x²"],
+        ["x³", "10^x", "1/x", "x!"],
+        ["(", ")", "|x|", "^"]
+      ]
+    }
+  }
+  
