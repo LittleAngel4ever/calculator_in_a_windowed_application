@@ -1,8 +1,8 @@
 import customtkinter as ctk
 import math
 
-ctk.set_appearance_mode("system")
-ctk.set_default_color_theme("theme.json") # style Mercedes Formula 1 Team 
+ctk.set_appearance_mode("system") 
+ctk.set_default_color_theme("theme.json") # Style Mercedes Formula 1 Team
 
 app = ctk.CTk()
 app.title("Калькулятор")
@@ -11,9 +11,17 @@ app.geometry("465x465")
 entry = ctk.CTkEntry(app, width=380, height=50, font=("Arial", 20))
 entry.pack(pady=10)
 
+def open_popup():
+    popup = ctk.CTkToplevel(app)
+    popup.geometry("250x150")
+    popup.title("Инструкция к n_sqrt")
+    label = ctk.CTkLabel(popup, text="Сначала число, потом корень.")
+    label.pack(pady=10)
+    close_button = ctk.CTkButton(popup, text="Закрыть", command=popup.destroy)
+    close_button.pack(pady=5)
+    popup.after(3000, popup.destroy)
+
 def n_sqrt(x, n):
-    from tkinter import messagebox
-    messagebox.showinfo("Инструкция", "Сначала число, потом степень корня")
     return math.pow(x, 1/n)
 
 def calculate():
@@ -36,6 +44,7 @@ def press(key):
     elif key == "√":
         entry.insert("end", "sqrt(")
     elif key == "ⁿ√":
+        open_popup()
         entry.insert("end", "n_sqrt(")
     else:
         entry.insert("end", key)
