@@ -12,14 +12,14 @@ entry = ctk.CTkEntry(app, width=380, height=50, font=("Arial", 20))
 entry.pack(pady=10)
 
 def open_popup():
-    popup = ctk.CTkToplevel(app)
-    popup.geometry("250x150")
-    popup.title("Инструкция к n_sqrt")
-    label = ctk.CTkLabel(popup, text="Сначала число, потом корень.")
-    label.pack(pady=10)
-    close_button = ctk.CTkButton(popup, text="Закрыть", command=popup.destroy)
+    second_window = ctk.CTkToplevel(app)
+    second_window.geometry("250x150")
+    second_window.title("Инструкция к n_sqrt")
+    show = ctk.CTkLabel(second_window, text="Сначала число, потом корень.")
+    show.pack(pady=10)
+    close_button = ctk.CTkButton(second_window, text="Закрыть", command=second_window.destroy)
     close_button.pack(pady=5)
-    popup.after(3000, popup.destroy)
+    second_window.after(3000, second_window.destroy)
 
 def n_sqrt(x, n):
     return math.pow(x, 1/n)
