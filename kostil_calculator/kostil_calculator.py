@@ -2,7 +2,7 @@ import customtkinter as ctk
 import math
 
 ctk.set_appearance_mode("system") 
-ctk.set_default_color_theme("theme.json") # Style Mercedes Formula 1 Team
+ctk.set_default_color_theme(r"d:\Codes\calculator_in_a_windowed_application\kostil_calculator\theme.json") # Style Mercedes Formula 1 Team
 
 app = ctk.CTk()
 app.title("Калькулятор")
